@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willkommen in der Unterwelt</title>
+<meta name="description" content="Hades ist ein Discord-Bot, der die Gameserver einer Freundesgruppe verwaltet – mit KI-Gestalten aus der griechischen Unterwelt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nacht: #231A2E;      /* Aubergine, nicht Schwarz */
+    --tiefe: #1A1323;
+    --knochen: #E9E0CB;
+    --asche: #A697B5;
+    --granat: #C8413A;     /* Persephones Granatapfel – der eine Akzent */
+    --lethe: #6E9B95;      /* Links */
+    --mass: 66ch;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--nacht); color: var(--knochen); }
+  body { margin: 0; font: 400 1.2rem/1.6 "EB Garamond", Georgia, serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--lethe); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--granat); outline-offset: 3px; }
+  main { max-width: var(--mass); margin: 0 auto; padding: 0 16px 6rem; }
+  h1, h2 { font-family: Cinzel, Georgia, serif; font-weight: 700; letter-spacing: .02em; line-height: 1.1; margin: 0; }
+  h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); margin-top: 5rem; }
+  h1 span { display: block; font-weight: 500; font-size: .42em; letter-spacing: .14em; color: var(--asche); margin-bottom: .9em; }
+  h2 { font-size: 1.5rem; margin-top: 4.5rem; margin-bottom: .8rem; color: var(--knochen); }
+  p { margin: 0 0 1.1em; }
+  .vorspann { font-size: 1.4rem; line-height: 1.5; margin: 1.6rem 0 0; max-width: 32ch; }
+  .vorspann em { font-style: normal; color: var(--granat); }
+  .tor { margin: 2.6rem 0 0; height: 1px; background: linear-gradient(90deg, var(--granat), transparent 70%); }
+  /* Stammtafel: Ort → Gestalten, als Liste, nicht als Kartenkit */
+  dl.orte { margin: 0; padding: 0; }
+  dl.orte dt { font-family: Cinzel, serif; font-weight: 500; letter-spacing: .06em; color: var(--asche); margin-top: 1.8rem; padding-top: .8rem; border-top: 1px solid rgba(233,224,203,.14); }
+  dl.orte dt small { font-family: "EB Garamond", serif; letter-spacing: 0; color: var(--asche); font-size: 1rem; margin-left: .6em; }
+  dl.orte dd { margin: .5rem 0 0 0; }
+  dl.orte b { font-weight: 500; color: var(--knochen); }
+  .regeln { padding-left: 1.2em; margin: 0; }
+  .regeln li { margin: 0 0 .8em; padding-left: .3em; }
+  .regeln li::marker { color: var(--granat); font-family: Cinzel, serif; }
+  .video { display: inline-block; margin-top: .4rem; padding: .7rem 1.2rem; border: 1px solid var(--granat); color: var(--knochen); text-decoration: none; font-family: Cinzel, serif; font-size: 1rem; letter-spacing: .06em; }
+  .video:hover { background: var(--granat); }
+  footer { margin-top: 5rem; color: var(--asche); font-size: 1rem; border-top: 1px solid rgba(233,224,203,.14); padding-top: 1rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    h1 { animation: auftauchen 1.2s ease-out both; }
+    @keyframes auftauchen { from { opacity: 0; transform: translateY(.3em); } }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1><span>Hades, ein Discord-Bot</span>Willkommen in der Unterwelt</h1>
+  <p class="vorspann">Die Unterwelt ist der Ort, an dem unsere Gameserver wohnen – <em>nicht in einem Rechenzentrum, sondern bei uns zu Hause.</em> Hades ist der Bot, der sie für eine Freundesgruppe in Discord verwaltet.</p>
+  <div class="tor"></div>
+
+  <h2>Was er tut</h2>
+  <p>Server starten und stoppen, Zugangsdaten herausgeben, Mods pflegen, Einstellungen ändern, neue Server bauen, kranke Server heilen, Musik spielen – und das alles im Gespräch. Man schreibt einfach in Discord, und die Gestalt antwortet, die in dem Kanal wohnt. Wer jemand Bestimmtes will, stellt den Namen voran: <i>„Charon, wie komme ich auf den Server?“</i> Was mit einem Ausrufezeichen beginnt, ist ein Befehl und wird sofort erledigt, ganz ohne KI.</p>
+  <p>Man muss nicht einmal tippen: Sprachnachrichten werden verstanden, und auf Wunsch sprechen die Gestalten im Voice mit ihrer eigenen Stimme.</p>
+
+  <h2>Wer hier wohnt</h2>
+  <p>Die Gestalten sind KI-Figuren mit festen Rollen. Jede kann nur, was ihre Werkzeuge erlauben – und was jemand darf, prüft der Bot, nicht die KI.</p>
+  <dl class="orte">
+    <dt>Die Pforte <small>hier fängt alles an</small></dt>
+    <dd><b>Kerberos</b>, der Hund an der Pforte, erklärt den Bot. Er beißt nicht. Meistens.</dd>
+    <dd><b>Charon</b>, der Fährmann, bringt Neue auf die Server: Einladung, Launcher, Mods.</dd>
+    <dd><b>Momos</b> spottet, spielt kleine Spiele und beantwortet allgemeine Fragen.</dd>
+    <dd><b>Dionysos</b> ist für alles <em>im</em> Spiel zuständig: Durchsagen, Whitelist, Events.</dd>
+    <dt>Das Orchester</dt>
+    <dd><b>Orpheus</b> macht Musik und liest vor.</dd>
+    <dt>Die Direktnachricht</dt>
+    <dd><b>Hermes</b>, der Bote, sieht nach und richtet Botschaften an die Verwalter aus.</dd>
+    <dt>Der Thronsaal <small>nur für Eingeweihte</small></dt>
+    <dd><b>Hades</b> selbst: der Alltag der Server, Status, Start und Stopp.</dd>
+    <dd><b>Daidalos</b> ändert Einstellungen und kümmert sich um Dateien.</dd>
+    <dd><b>Hephaistos</b> baut Mods und Modpacks.</dd>
+    <dd><b>Persephone</b> erschafft als Einzige neue Server.</dd>
+    <dd><b>Mnemosyne</b> weiß alles über die Games. Wirklich alles.</dd>
+    <dd><b>Asklepios</b> heilt Server, wenn sie krank sind.</dd>
+  </dl>
+
+  <h2>Drei Regeln</h2>
+  <ol class="regeln">
+    <li><b>Stufen.</b> Fremde, Spieler, Eingeweihte, Verwalter, Besitzer. Je höher, desto mehr darf man – und Stufen vergeben nur Menschen, keine KI.</li>
+    <li><b>Einwilligung.</b> Die Gestalten denken mit einer KI außerhalb der Unterwelt. Bevor irgendetwas von einer Person dorthin geht, willigt sie ein. Für Sprachnachrichten und Stimmen gesondert.</li>
+    <li><b>Erst planen, dann ändern.</b> Keine Gestalt ändert einfach so etwas an einem Server. Sie schreibt einen Plan; ein Verwalter übernimmt ihn, vorher wird gesichert, und wenn es schiefgeht, kommt alles zurück.</li>
+  </ol>
+
+  <h2>Wie es gebaut ist</h2>
+  <p>Der Bot ist eine Sammlung von n8n-Workflows auf einem kleinen Rechner, der Tag und Nacht läuft. Die Gestalten sind Claude-Modelle mit fest verdrahteten Werkzeugen. Die Server laufen als Docker-Container auf einem großen Rechner, der nachts schläft und sich in Discord wecken lässt; ein Agent auf dieser Maschine ist die einzige Stelle, die Docker anfasst. Mitspieler kommen über ein privates Netz auf die Server – nichts davon ist aus dem Internet erreichbar.</p>
+
+  <h2>Die Einführung</h2>
+  <p>Hades hält ein Schulreferat über seine Unterwelt – sechzehn Folien, leicht unbeholfen, mit seiner eigenen Stimme.</p>
+  <a class="video" href="YOUTUBE_LINK_EINTRAGEN">Referat ansehen</a>
+
+  <footer>Ein Hobbyprojekt. Die Repos der Organisation <a href="https://github.com/Unterwelt-Bot">Unterwelt-Bot</a> sind privat; diese Seite ist die öffentliche Vorstellung.</footer>
+</main>
+</body>
+</html>
