@@ -57,7 +57,8 @@
 
   <h2>Was er tut</h2>
   <p>Server starten und stoppen, Zugangsdaten herausgeben, Mods pflegen, Einstellungen ändern, neue Server bauen, kranke Server heilen, Musik spielen – und das alles im Gespräch. Man schreibt einfach in Discord, und die Gestalt antwortet, die in dem Kanal wohnt. Wer jemand Bestimmtes will, stellt den Namen voran: <i>„Charon, wie komme ich auf den Server?“</i> Was mit einem Ausrufezeichen beginnt, ist ein Befehl und wird sofort erledigt, ganz ohne KI.</p>
-  <p>Man muss nicht einmal tippen: Sprachnachrichten werden verstanden, und auf Wunsch sprechen die Gestalten im Voice mit ihrer eigenen Stimme.</p>
+  <p>Man muss nicht einmal tippen: Sprachnachrichten werden verstanden, und im Voice hören die Gestalten auf ihr Weckwort und antworten mit ihrer eigenen Stimme. Kurze Befehle wie „Hey Jarvis, Musik leiser“ erkennt der Bot ganz ohne KI, direkt bei uns zu Hause.</p>
+  <p>Was auf den Servern passiert, schreibt ein Chronist der Unterwelt ans Schwarze Brett: wer aufwacht, wer schläft, was neu gebaut oder geheilt wurde.</p>
 
   <h2>Wer hier wohnt</h2>
   <p>Die Gestalten sind KI-Figuren mit festen Rollen. Jede kann nur, was ihre Werkzeuge erlauben – und was jemand darf, prüft der Bot, nicht die KI.</p>
@@ -68,7 +69,10 @@
     <dd><b>Momos</b> spottet, spielt kleine Spiele und beantwortet allgemeine Fragen.</dd>
     <dd><b>Dionysos</b> ist für alles <em>im</em> Spiel zuständig: Durchsagen, Whitelist, Events.</dd>
     <dt>Das Orchester</dt>
-    <dd><b>Orpheus</b> macht Musik und liest vor.</dd>
+    <dd><b>Orpheus</b> macht Musik und plaudert darüber.</dd>
+    <dt>Im Voice <small>wo gesprochen wird</small></dt>
+    <dd><b>Echo</b> ist die Gastgeberin: plaudert, spielt Musik und Sounds und holt für alles andere die passende Gestalt.</dd>
+    <dd>Hades, Kerberos, Charon, Dionysos, Momos, Orpheus und Jarvis kommen dazu, wenn man sie ruft.</dd>
     <dt>Die Direktnachricht</dt>
     <dd><b>Hermes</b>, der Bote, sieht nach und richtet Botschaften an die Verwalter aus.</dd>
     <dt>Der Thronsaal <small>nur für Eingeweihte</small></dt>
@@ -78,17 +82,21 @@
     <dd><b>Persephone</b> erschafft als Einzige neue Server.</dd>
     <dd><b>Mnemosyne</b> weiß alles über die Games. Wirklich alles.</dd>
     <dd><b>Asklepios</b> heilt Server, wenn sie krank sind.</dd>
+    <dt>Überall <small>wenn man ihn ruft</small></dt>
+    <dd><b>Jarvis</b>, ein kleiner, eifriger Diener-Roboter, nimmt alles wörtlich und erzählt Roboterwitze. Er antwortet nur, wenn man ihn direkt anspricht.</dd>
   </dl>
 
   <h2>Drei Regeln</h2>
   <ol class="regeln">
     <li><b>Stufen.</b> Fremde, Spieler, Eingeweihte, Verwalter, Besitzer. Je höher, desto mehr darf man – und Stufen vergeben nur Menschen, keine KI.</li>
-    <li><b>Einwilligung.</b> Die Gestalten denken mit einer KI außerhalb der Unterwelt. Bevor irgendetwas von einer Person dorthin geht, willigt sie ein. Für Sprachnachrichten und Stimmen gesondert.</li>
+    <li><b>Einwilligung.</b> Die Gestalten denken mit einer KI außerhalb der Unterwelt. Bevor irgendetwas von einer Person dorthin geht, willigt sie ein – für jeden Anbieter einzeln, auch für Sprache und Stimmen. Was bei uns zu Hause bleibt, braucht keine Einwilligung.</li>
     <li><b>Erst planen, dann ändern.</b> Keine Gestalt ändert einfach so etwas an einem Server. Sie schreibt einen Plan; ein Verwalter übernimmt ihn, vorher wird gesichert, und wenn es schiefgeht, kommt alles zurück.</li>
   </ol>
 
   <h2>Wie es gebaut ist</h2>
-  <p>Der Bot ist eine Sammlung von n8n-Workflows auf einem kleinen Rechner, der Tag und Nacht läuft. Die Gestalten sind Claude-Modelle mit fest verdrahteten Werkzeugen. Die Server laufen als Docker-Container auf einem großen Rechner, der nachts schläft und sich in Discord wecken lässt; ein Agent auf dieser Maschine ist die einzige Stelle, die Docker anfasst. Mitspieler kommen über ein privates Netz auf die Server – nichts davon ist aus dem Internet erreichbar.</p>
+  <p>Der Bot ist eine Sammlung von n8n-Workflows auf einem kleinen Rechner, der Tag und Nacht läuft. Die Gestalten sind Claude-Modelle mit fest verdrahteten Werkzeugen. Die Server laufen als Docker-Container auf einem großen Rechner, der nachts schläft und sich in Discord wecken lässt; ein Agent auf dieser Maschine ist die einzige Stelle, die Docker anfasst. Was er über die Games weiß, steht in einem eigenen Katalog.</p>
+  <p>Für den Voice gibt es einen zweiten Bot, das Orchester: Musik, Stimmen und Zuhören. Verstanden wird die Sprache entweder bei Mistral oder von einem Modell im eigenen Haus; gesprochen wird mit Piper, ElevenLabs oder ebenfalls lokal – umschaltbar je Aufgabe.</p>
+  <p>Mitspieler kommen über ein privates Netz auf die Server. Einzelne Server lassen sich auf Wunsch öffentlich stellen; der Bot selbst ist nie aus dem Internet erreichbar.</p>
 
   <h2>Die Einführung</h2>
   <p>Hades hält ein Schulreferat über seine Unterwelt – sechzehn Folien, leicht unbeholfen, mit seiner eigenen Stimme.</p>
